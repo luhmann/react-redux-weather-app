@@ -12,7 +12,7 @@ class Cities extends Component {
 
   render() {
     return (
-      <div>
+      <div className="cities">
         {Object.keys(this.props.cities).map(cityName => {
           const city = this.props.cities[cityName]
 

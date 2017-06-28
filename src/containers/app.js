@@ -5,7 +5,7 @@ import About from './about'
 import ConnectedCities from './cities'
 
 const App = () =>
-  <div>
+  <div className="content">
     <header>
       <Link to="/">Home</Link>
       <Link to="/about-us">About</Link>
