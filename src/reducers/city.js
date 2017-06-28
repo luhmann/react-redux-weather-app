@@ -25,13 +25,12 @@ export default (state = initialState, action) => {
       }
       return state
     case RECEIVE_CITY:
-      console.log(action)
       return {
         ...state,
         cities: {
           ...state.cities,
-          [action.payload.response.name]: {
-            name: action.payload.response.name,
+          [action.payload.name]: {
+            name: action.payload.name,
             isLoading: false,
             degrees: kelvinToCelsius(action.payload.response.main.temp),
             iconUrl: getIconUrl(action.payload.response.weather[0].icon),

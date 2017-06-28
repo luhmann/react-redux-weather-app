@@ -21,9 +21,10 @@ export const requestCity = city => ({
   payload: city,
 })
 
-export const receiveCity = response => ({
+export const receiveCity = (city, response) => ({
   type: RECEIVE_CITY,
   payload: {
+    name: city,
     response,
   },
 })
@@ -36,7 +37,7 @@ export const fetchCity = city => dispatch => {
 
   return fetch(getCityWeatherUrl(city))
     .then(data => data.json())
-    .then(response => dispatch(receiveCity(response)))
+    .then(response => dispatch(receiveCity(city, response)))
     .catch(err => {
       console.error(err)
     })
