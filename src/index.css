@@ -26,3 +26,13 @@ main {
   flex-direction: column;
   height: 100vh;
 }
+
+.city {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+}
+
+.city__info {
+  display: flex;
+  align-items: center;
+}
