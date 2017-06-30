@@ -33,6 +33,7 @@ export const receiveCity = (city, response) => ({
 export const errorCity = (city, error) => ({
   type: FETCH_CITY_ERROR,
   payload: {
+    name: city,
     error,
   },
 })
