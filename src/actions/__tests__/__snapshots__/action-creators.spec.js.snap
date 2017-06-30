@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actions: Weather dispatches the correct actions when successfully fetching a city 1`] = `
+Array [
+  Object {
+    "payload": "Berlin",
+    "type": "FETCH_CITY_REQUEST",
+  },
+  Object {
+    "payload": Object {
+      "name": "Berlin",
+      "response": Object {
+        "base": "stations",
+        "clouds": Object {
+          "all": 90,
+        },
+        "cod": 200,
+        "coord": Object {
+          "lat": 52.52,
+          "lon": 13.41,
+        },
+        "dt": 1498812600,
+        "id": 2950159,
+        "main": Object {
+          "humidity": 87,
+          "pressure": 999,
+          "temp": 289.15,
+          "temp_max": 289.15,
+          "temp_min": 289.15,
+        },
+        "name": "Berlin",
+        "sys": Object {
+          "country": "DE",
+          "id": 4892,
+          "message": 0.0026,
+          "sunrise": 1498790842,
+          "sunset": 1498851154,
+          "type": 1,
+        },
+        "visibility": 10000,
+        "weather": Array [
+          Object {
+            "description": "light rain",
+            "icon": "10d",
+            "id": 500,
+            "main": "Rain",
+          },
+        ],
+        "wind": Object {
+          "deg": 260,
+          "speed": 9.3,
+        },
+      },
+    },
+    "type": "FETCH_CITY_SUCCESS",
+  },
+]
+`;
