@@ -13,19 +13,27 @@ export const decrement = (amount = 1) => ({
   payload: amount,
 })
 
-export const REQUEST_CITY = 'REQUEST_CITY'
-export const RECEIVE_CITY = 'RECEIVE_CITY'
+export const FETCH_CITY_REQUEST = 'FETCH_CITY_REQUEST'
+export const FETCH_CITY_SUCCESS = 'FETCH_CITY_SUCCESS'
+export const FETCH_CITY_ERROR = 'FETCH_CITY_ERROR'
 
 export const requestCity = city => ({
-  type: REQUEST_CITY,
+  type: FETCH_CITY_REQUEST,
   payload: city,
 })
 
 export const receiveCity = (city, response) => ({
-  type: RECEIVE_CITY,
+  type: FETCH_CITY_SUCCESS,
   payload: {
     name: city,
     response,
+  },
+})
+
+export const errorCity = (city, error) => ({
+  type: FETCH_CITY_ERROR,
+  payload: {
+    error,
   },
 })
 
@@ -38,9 +46,7 @@ export const fetchCity = city => dispatch => {
   return fetch(getCityWeatherUrl(city))
     .then(data => data.json())
     .then(response => dispatch(receiveCity(city, response)))
-    .catch(err => {
-      console.error(err)
-    })
+    .catch(err => dispatch(errorCity(city, err)))
 }
 
 export const loadCities = cities => dispatch => {
