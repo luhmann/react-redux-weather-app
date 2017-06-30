@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: City should render as expected when loading 1`] = `
+<div
+  className="city"
+>
+  Loading data for 
+  Berlin
+</div>
+`;
+
+exports[`Component: City should render as expected when not loading 1`] = `
+<div
+  className="city"
+>
+  <div
+    className="city__name"
+  >
+    Berlin
+  </div>
+  <div
+    className="city__info"
+  >
+    <img
+      src="http://example.org/test.png"
+    />
+    20
+    °C
+  </div>
+</div>
+`;

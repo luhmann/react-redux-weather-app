@@ -5,7 +5,7 @@ const City = ({ degrees, iconUrl = null, name, isLoading = false }) => {
   if (isLoading) {
     return (
       <div className="city">
-        Loading {name}
+        Loading data for {name}
       </div>
     )
   }
@@ -24,7 +24,7 @@ const City = ({ degrees, iconUrl = null, name, isLoading = false }) => {
 }
 
 City.propTypes = {
-  degrees: PropTypes.number.isRequired,
+  degrees: PropTypes.number,
   iconUrl: PropTypes.string,
   name: PropTypes.string.isRequired,
   isLoading: PropTypes.bool.isRequired,
@@ -32,6 +32,7 @@ City.propTypes = {
 
 City.defaultProps = {
   iconUrl: null,
+  degrees: null,
 }
 
 export default City

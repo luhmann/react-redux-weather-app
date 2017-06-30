@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container: Cities should render cities passed from redux store 1`] = `
+<div
+  className="cities"
+>
+  <City
+    degrees={-5}
+    iconUrl="http://example.org/icons/hamburg.png"
+    isLoading={false}
+    name="Hamburg"
+  />
+  <City
+    degrees={10}
+    iconUrl="http://example.org/icons/berlin.png"
+    isLoading={false}
+    name="Berlin"
+  />
+  <City
+    degrees={28}
+    iconUrl="http://example.org/icons/maui.png"
+    isLoading={false}
+    name="Maui"
+  />
+  <City
+    degrees={18}
+    iconUrl="http://example.org/icons/paris.png"
+    isLoading={false}
+    name="Paris"
+  />
+</div>
+`;
