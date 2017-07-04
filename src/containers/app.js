@@ -1,17 +1,23 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import Home from './home'
-import ConnectedCities from './cities'
+import { connect } from 'react-redux'
+import Link from 'redux-first-router-link'
 
-const App = () =>
+import { mapRouteToComponent } from '../store/routing'
+
+const App = ({ Page }) =>
   <div className="content">
     <header>
       <Link to="/">Home</Link>
       <Link to="/cities">Cities</Link>
     </header>
 
-    <Route exact path="/" component={Home} />
-    <Route exact path="/cities" component={ConnectedCities} />
+    <Page />
   </div>
 
-export default App
+const mapStateToProps = ({ location }) => ({
+  Page: mapRouteToComponent(location.type),
+})
+
+export { App }
+
+export default connect(mapStateToProps)(App)
