@@ -1,4 +1,8 @@
-import { FETCH_CITY_REQUEST, FETCH_CITY_SUCCESS, FETCH_CITY_ERROR } from '../actions'
+import {
+  FETCH_CITY_REQUEST,
+  FETCH_CITY_SUCCESS,
+  FETCH_CITY_ERROR,
+} from '../actions'
 
 const initialState = {
   cities: {},

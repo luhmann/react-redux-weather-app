@@ -53,3 +53,12 @@ export const fetchCity = city => dispatch => {
 export const loadCities = cities => dispatch => {
   cities.map(city => dispatch(fetchCity(city)))
 }
+
+export const LOCATION_HOME = 'LOCATION_HOME'
+export const LOCATION_CITIES = 'LOCATION_CITIES'
+export const LOCATION_NOT_FOUND = 'LOCATION_NOT_FOUND'
+
+export const switchPage = (page, payload) => ({
+  type: page,
+  payload,
+})
